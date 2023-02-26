@@ -1,0 +1,40 @@
+.main-grid {
+  min-height: 100vh !important;
+}
+
+body main .main-grid {
+  display: grid;
+  grid-template: 200px 1fr/300px 1fr;
+}
+body main .main-grid > div {
+  padding: 2rem;
+}
+body main .main-grid .sidebar {
+  grid-area: 1/1/-1/2;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  background-color: rgb(71, 182, 197);
+  color: white;
+}
+body main .main-grid .sidebar .sidebar-logo {
+  display: flex;
+  gap: 0.5rem;
+}
+body main .main-grid .sidebar .sidebar-logo h2 {
+  font-size: 2rem;
+}
+body main .main-grid .sidebar .sidebar-tabs, body main .main-grid .sidebar .sidebar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body main .main-grid .sidebar .sidebar-tabs .sidebar-tab, body main .main-grid .sidebar .sidebar-options .sidebar-tab {
+  display: flex;
+  gap: 0.5rem;
+}
+body main .main-grid .sidebar .sidebar-tabs .sidebar-tab p, body main .main-grid .sidebar .sidebar-options .sidebar-tab p {
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

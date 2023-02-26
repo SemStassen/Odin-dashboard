@@ -1,0 +1,51 @@
+$primary-color: rgb(71, 182, 197);
+
+.main-grid {
+    min-height: 100vh !important;
+}
+
+body {
+    main {
+        .main-grid {
+            display: grid;
+            grid-template: 200px 1fr / 300px 1fr;
+
+            >div {
+                padding: 2rem;
+            }
+
+            .sidebar {
+                grid-area: 1 / 1 / -1 / 2;
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+                background-color: $primary-color;
+                color: white;
+                .sidebar-logo {
+                    display: flex;
+                    gap: 0.5rem;
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+
+                .sidebar-tabs, .sidebar-options {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    .sidebar-tab {
+                        display: flex;
+                        gap: 0.5rem;
+                        p {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .header {}
+
+            .main-content {}
+        }
+    }
+}

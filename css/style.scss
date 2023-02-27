@@ -1,4 +1,13 @@
-$primary-color: rgb(71, 182, 197);
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+$primary-color: #3b82f6;
+$font-family-main: 'Lato', sans-serif;
+$base-icon-size: 35px;
+$grey: rgba(184, 184, 184, 0.3);
+
+*{
+    box-sizing: border-box;
+}
 
 .main-grid {
     min-height: 100vh !important;
@@ -8,13 +17,14 @@ body {
     main {
         .main-grid {
             display: grid;
-            grid-template: 200px 1fr / 300px 1fr;
-
+            grid-template: 200px 1fr / 350px 1fr;
+            font-family: $font-family-main;
             >div {
-                padding: 2rem;
+                padding: 1.5rem;
             }
 
             .sidebar {
+                z-index: 1;
                 grid-area: 1 / 1 / -1 / 2;
                 display: flex;
                 flex-direction: column;
@@ -22,9 +32,12 @@ body {
                 background-color: $primary-color;
                 color: white;
                 .sidebar-logo {
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: 60px 1fr;
+                    align-items: center;
                     gap: 0.5rem;
                     h2 {
+                        font-weight: bold;
                         font-size: 2rem;
                     }
                 }
@@ -32,20 +45,124 @@ body {
                 .sidebar-tabs, .sidebar-options {
                     display: flex;
                     flex-direction: column;
-                    gap: 0.5rem;
+                    gap: 1rem;
+                    margin-left: 1rem;
                     .sidebar-tab {
-                        display: flex;
-                        gap: 0.5rem;
+                        display: grid;
+                        grid-template-columns: $base-icon-size 1fr;
+                        align-items: center;
+                        gap: 1rem;
+                        cursor: pointer;
                         p {
                             font-size: 1.5rem;
+                            font-weight: bold;
                         }
                     }
                 }
             }
 
-            .header {}
+            .header {
+                display: grid;
+                grid-template-rows: 1fr 2fr;
+                padding-inline: 3rem;
+                box-shadow: 0 10px 10px 0 black;
+                .header-top {
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    gap: 3rem;
+                    .header-top-search {
+                        display: grid;
+                        grid-template-columns: $base-icon-size 1fr;
+                        align-items: center;
+                        gap: 1rem;
+                        input {
+                            height: calc($base-icon-size + 10px);
+                            max-width: 50rem;
+                            border-radius: 20px;
+                            padding-inline: 1rem;
+                            border-color: $grey;
+                            background-color: $grey;
+                            font-family: $font-family-main;
+                            font-size: 1.25rem;
+                        }
+                    }
+                    .header-top-account {
+                        display: grid;
+                        grid-template-columns: $base-icon-size repeat(2, auto);
+                        gap: 2rem;
+                        align-items: center;
+                        .account-icon {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 60px;
+                            width: 60px;
+                            border-radius: 50%;
+                            background-color: yellow;
+                            img {
+                                width: 80%;
+                                height: 80%;
+                                border-radius: 50%;
+                            }
+                        }
+                        .account-name {
+                            font-size: 1.5rem;
+                            font-weight: bold;   
+                        }
+                    }
+                }
+                .header-bottom {
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    align-content: end;
+                    .header-bottom-account {
+                        display: grid;
+                        grid-template: 40px 40px / 80px auto;
+                        column-gap: 1rem;
+                        .account-icon {
+                            grid-area: 1 / 1 / 3 / 2;
+                            border-radius: 50%;
+                            background-color: yellow;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img {
+                                width: 80%;
+                                height: 80%;
+                            }
+                        }
+                        .account-greeting {
+                            align-self: end;
+                            margin-bottom: 5px;
+                        }
+                        .account-name {
+                            display: flex;
+                            gap: 10px;
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                        }
+                    }
+                    .header-bottom-utils {
+                        display: grid;
+                        grid-auto-flow: column;
+                        align-content: center;
+                        gap: 1rem;
+                        button {
+                            padding: 0.6rem 2.4rem;
+                            border: none;
+                            border-radius: 20px;
+                            background-color: lighten($primary-color, 5%);
+                            color: white;
+                            font-size: 1.2rem;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
 
-            .main-content {}
+            .main-content {
+                background-color: rgba(236, 235, 235, 0.767);
+            }
         }
     }
 }

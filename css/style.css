@@ -153,6 +153,47 @@ body main .main-grid .main-content {
   display: grid;
   grid-template-columns: 1fr 300px;
   background-color: rgba(236, 235, 235, 0.767);
+  gap: 2rem;
+}
+body main .main-grid .main-content .projects h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+body main .main-grid .main-content .projects .projects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: 1.5rem;
+  gap: 2rem;
+}
+body main .main-grid .main-content .projects .projects-wrapper .project {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 2rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 8px solid orange;
+}
+body main .main-grid .main-content .projects .projects-wrapper .project .project-content h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+body main .main-grid .main-content .projects .projects-wrapper .project .project-content p {
+  opacity: 0.7;
+}
+body main .main-grid .main-content .projects .projects-wrapper .project .utils {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+body main .main-grid .main-content .projects .projects-wrapper .project .utils .util-wrapper {
+  width: 30px;
+  height: 30px;
+}
+body main .main-grid .main-content .projects .projects-wrapper .project .utils .util-wrapper img {
+  width: 100%;
+  height: 100%;
 }
 body main .main-grid .main-content .live-feed-column {
   display: flex;
@@ -185,6 +226,45 @@ body main .main-grid .main-content .live-feed-column .announcements .announcemen
 body main .main-grid .main-content .live-feed-column .announcements .announcements-wrapper .announcement .announcement-title, body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper .announcement .announcement-title, body main .main-grid .main-content .live-feed-column .trending .announcements-wrapper .announcement .announcement-title, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper .announcement .announcement-title {
   font-weight: bold;
   font-size: 1.2rem;
+}
+body main .main-grid .main-content .live-feed-column .announcements .announcements-wrapper .trending-account, body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper .trending-account, body main .main-grid .main-content .live-feed-column .trending .announcements-wrapper .trending-account, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper .trending-account {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 23px 23px;
+  row-gap: 4px;
+  column-gap: 1rem;
+}
+body main .main-grid .main-content .live-feed-column .announcements .announcements-wrapper .trending-account:nth-child(1) .account-icon, body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper .trending-account:nth-child(1) .account-icon, body main .main-grid .main-content .live-feed-column .trending .announcements-wrapper .trending-account:nth-child(1) .account-icon, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper .trending-account:nth-child(1) .account-icon {
+  background-color: lightcoral;
+}
+body main .main-grid .main-content .live-feed-column .announcements .announcements-wrapper .trending-account:nth-child(2) .account-icon, body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper .trending-account:nth-child(2) .account-icon, body main .main-grid .main-content .live-feed-column .trending .announcements-wrapper .trending-account:nth-child(2) .account-icon, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper .trending-account:nth-child(2) .account-icon {
+  background-color: lightgreen;
+}
+body main .main-grid .main-content .live-feed-column .announcements .announcements-wrapper .trending-account:nth-child(3) .account-icon, body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper .trending-account:nth-child(3) .account-icon, body main .main-grid .main-content .live-feed-column .trending .announcements-wrapper .trending-account:nth-child(3) .account-icon, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper .trending-account:nth-child(3) .account-icon {
+  background-color: lightsalmon;
+}
+body main .main-grid .main-content .live-feed-column .announcements .announcements-wrapper .trending-account:nth-child(4) .account-icon, body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper .trending-account:nth-child(4) .account-icon, body main .main-grid .main-content .live-feed-column .trending .announcements-wrapper .trending-account:nth-child(4) .account-icon, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper .trending-account:nth-child(4) .account-icon {
+  background-color: lightgoldenrodyellow;
+}
+body main .main-grid .main-content .live-feed-column .announcements .announcements-wrapper .trending-account .account-icon, body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper .trending-account .account-icon, body main .main-grid .main-content .live-feed-column .trending .announcements-wrapper .trending-account .account-icon, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper .trending-account .account-icon {
+  grid-area: 1/1/3/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+body main .main-grid .main-content .live-feed-column .announcements .announcements-wrapper .trending-account .account-icon img, body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper .trending-account .account-icon img, body main .main-grid .main-content .live-feed-column .trending .announcements-wrapper .trending-account .account-icon img, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper .trending-account .account-icon img {
+  width: 80%;
+  height: 80%;
+}
+body main .main-grid .main-content .live-feed-column .announcements .announcements-wrapper .trending-account .account-tag, body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper .trending-account .account-tag, body main .main-grid .main-content .live-feed-column .trending .announcements-wrapper .trending-account .account-tag, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper .trending-account .account-tag {
+  align-self: end;
+}
+body main .main-grid .main-content .live-feed-column .announcements .announcements-wrapper .trending-account .account-name, body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper .trending-account .account-name, body main .main-grid .main-content .live-feed-column .trending .announcements-wrapper .trending-account .account-name, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper .trending-account .account-name {
+  opacity: 0.4;
+}
+body main .main-grid .main-content .live-feed-column .announcements .trending-wrapper, body main .main-grid .main-content .live-feed-column .trending .trending-wrapper {
+  gap: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
